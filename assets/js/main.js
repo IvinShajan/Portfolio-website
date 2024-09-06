@@ -149,3 +149,29 @@
   });
 
 })(jQuery);
+
+
+// Add this code to your main.js file or in a <script> tag at the end of your HTML body
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Get all the navigation links
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  // Add click event listener to each link
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Get the target section id from the href attribute
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      // Scroll to the target section
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
