@@ -1,2 +1,2 @@
 # Portfolio-website
-Student friendly portfolio website using HTML,CSS,..
+Student friendly portfolio website using HTML
